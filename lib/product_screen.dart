@@ -65,7 +65,59 @@ class _ProductScreenState extends State<ProductScreen> {
                     );
                   }),
             ),
-          ],
+            const SizedBox(height: 20,),
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 16),
+              height: 190,
+              width: double.maxFinite,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.red.shade100.withOpacity(0.3)
+              ),
+                child: Row(children: [
+                  Container(
+                    width: 220,
+                    decoration:const BoxDecoration(
+                      color: Color.fromARGB(225, 235, 221, 200),
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(100), 
+                      topRight: Radius.circular(100))
+                      ),
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                        Image(
+                          height: 120,
+                          image: AssetImage('assets/images/open.jpeg'),
+                          ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            "Flash Sale", 
+                            style: TextStyle(
+                            fontSize:18, 
+                            fontWeight: FontWeight.bold,
+                            ),
+                            ),
+                        )
+
+                      ],
+                      ),
+                  ),
+                  Column(children: [
+                    SizedBox(width: 120, 
+                    child: Text(
+                      'Get your Special Sale up to 50%', 
+                    style: TextStyle(
+                      fontSize: 20, 
+                      fontWeight: FontWeight.bold,
+                      ),),),
+                  ],)
+                ],
+                ),
+            )
+                     ],
         ),
       ),
     );

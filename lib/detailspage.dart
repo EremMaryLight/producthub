@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:producthub/data/model.dart';
-import 'package:producthub/detailspage.dart';
+import 'package:producthub/homepage.dart';
 
-class ProductScreen extends StatefulWidget {
-  const ProductScreen({super.key});
+class Detailspage extends StatefulWidget {
+  const Detailspage({super.key});
 
   @override
-  State<ProductScreen> createState() => _ProductScreenState();
+  State<Detailspage> createState() => _DetailspageState();
 }
 
-class _ProductScreenState extends State<ProductScreen> {
-  List<String> category = [
+class _DetailspageState extends State<Detailspage> {
+    List<String> category = [
     'All Products', 
     'Women Clothes',
     'male clothes', 
@@ -146,10 +146,10 @@ class _ProductScreenState extends State<ProductScreen> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal:16),
                 child: GridView.builder(
-                  itemCount: productList.length,
+                  itemCount: productdetailsList.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
                 itemBuilder: (context, index){
-                  final newProductList = productList[index];
+                  final newProductdetailsList = productdetailsList[index];
                   return Container(
                     margin: const EdgeInsets.symmetric(
                       horizontal: 5, vertical: 5),
@@ -160,15 +160,16 @@ class _ProductScreenState extends State<ProductScreen> {
                         Padding(padding: const EdgeInsets.all(20), 
                         child: Image(
                           height: 70,
-                          image: AssetImage(newProductList.img)),
+                          image: AssetImage(newProductdetailsList.img)),
                           ),
-                          Text(newProductList.price),
-                          Text(newProductList.description),
+                          Text(newProductdetailsList.price),
+                          Text(newProductdetailsList.description),
+                          Text(newProductdetailsList.size),
                           SizedBox(
                              height: 20,
                            ),
                           AppButton(
-                            text: 'see more', 
+                            text: 'add to cart', 
                             bGColor: Colors.red,),
                           ],
                         ),

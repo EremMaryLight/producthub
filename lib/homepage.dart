@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text(
-                'find the perfect dress',
+                'find the perfect product',
                 style: TextStyle(
                     fontSize: 34,
                     color: Colors.white,
@@ -80,6 +80,8 @@ class AppButton extends StatelessWidget {
         text, 
         style: const TextStyle(
         fontSize: 18, color: Colors.white
-      )));
+      )
+      )
+      );
   }
 }
